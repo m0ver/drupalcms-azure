@@ -130,6 +130,17 @@
     'prefix' => '',
     'collation' => 'utf8mb4_general_ci',
  );
+ 
+ $databases['default']['default'] = array (
+ 	'database' => 'nokiadeveloperportal_cleardb',
+ 	'username' => 'b8ae2487c1430a',
+ 	'password' => '7de120c0',
+ 	'host' => 'eu-cdbr-azure-west-b.cloudapp.net',
+ 	'port' => '3306',
+ 	'driver' => 'mysql',
+ 	'prefix' => '',
+ 	'collation' => 'utf8mb4_general_ci',
+ );
 /**
  * Customizing database settings.
  *
