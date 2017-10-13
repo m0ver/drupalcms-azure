@@ -120,27 +120,6 @@
  		'driver' => 'mysql',
  );
  
- $databases['default']['default'] = array (
-    'database' => 'nokiadeveloperportal-dev',
-    'username' => 'nokia_admin@nokiadeveloperportal-dev',
-    'password' => 'Dev012345',
-    'host' => 'nokiadeveloperportal-dev.mysql.database.azure.com',
-    'port' => '3306',
-    'driver' => 'mysql',
-    'prefix' => '',
-    'collation' => 'utf8mb4_general_ci',
- );
- 
- $databases['default']['default'] = array (
- 	'database' => 'nokiadeveloperportal_cleardb',
- 	'username' => 'b8ae2487c1430a',
- 	'password' => '7de120c0',
- 	'host' => 'eu-cdbr-azure-west-b.cloudapp.net',
- 	'port' => '3306',
- 	'driver' => 'mysql',
- 	'prefix' => '',
- 	'collation' => 'utf8mb4_general_ci',
- );
 /**
  * Customizing database settings.
  *
@@ -812,7 +791,12 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
+
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+
+// Switch to aluinternet_content database
+if (file_exists('/home/site/settings/')) {
+	require '/home/site/settings/settings.inc';
+}
